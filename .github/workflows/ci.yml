@@ -18,4 +18,5 @@ jobs:
           test -f index.html
           test -f style.css
           test -f app.js
+          test -f abc.txt
           echo "CI 检查通过"
