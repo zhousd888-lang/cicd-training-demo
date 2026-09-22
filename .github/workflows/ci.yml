@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 获取代码
+        uses: actions/checkout@v4
+
+      - name: 检查项目文件
+        run: |
+          test -f index.html
+          test -f style.css
+          test -f app.js
+          echo "CI 检查通过"
